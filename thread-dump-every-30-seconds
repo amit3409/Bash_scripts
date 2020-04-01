@@ -1,0 +1,7 @@
+#!/bin/sh
+#Take a heap dump every 30 seconds and insert date and timestamp on the file name
+while true
+do
+  jmap -dump:file=/home/ecom/java-`date +%s`.hprof <PID_OF_JVM>
+  sleep 30
+done
